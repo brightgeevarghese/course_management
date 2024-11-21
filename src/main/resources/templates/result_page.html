@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Result Page</title>
+    </meta>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Course Code</th>
+        <th>Course Name</th>
+    </tr>
+    <tr th:each="courseResponseDTO : ${courseResponseDTOS}">
+        <td th:text="${courseResponseDTO.courseCode}"/>
+        <td th:text="${courseResponseDTO.courseName}"/>
+    </tr>
+    </table>
+</table>
+<a th:href="@{/api/v1/home}">Back to Home Page</a>
+</body>
+</html>
